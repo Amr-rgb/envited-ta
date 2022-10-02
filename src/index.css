@@ -4,13 +4,16 @@
 
 @font-face {
   font-family: Helvetica;
-  src: url(/fonts/helvetica.ttf);
+  src: url(/fonts/helvetica.ttf) format("ttf");
+  font-weight: normal;
 }
 @font-face {
   font-family: Helvetica;
-  src: url(/fonts/helvetica-light.ttf);
+  src: url(/fonts/helvetica-light.ttf) format("ttf");
+  font-weight: light;
 }
 @font-face {
   font-family: Helvetica;
-  src: url(/fonts/helvetica-bold.ttf);
+  src: url(/fonts/helvetica-bold.ttf) format("ttf");
+  font-weight: bold;
 }
