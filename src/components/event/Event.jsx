@@ -18,7 +18,7 @@ export const Event = () => {
               {data.titleVal}
             </h2>
             <p className="text-[#828282]">
-              Hosted By <span className="font-bold">Elysia</span>
+              Hosted By <span className="font-bold">{data.hostName}</span>
             </p>
           </div>
 
