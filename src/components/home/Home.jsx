@@ -26,6 +26,8 @@ export const Home = () => {
           className="w-40 sm:w-48 md:w-64 lg:mr-20 lg:flex-1 lg:max-w-sm"
           src="/assets/Landing_page_image.svg"
           alt="landing page image"
+          width={384}
+          height={752.633}
         />
 
         <Button className="lg:hidden" />
