@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Home = () => {
   return (
     <main className="bg-secPurple3 min-h-screen px-4 py-20 flex items-center">
@@ -34,13 +36,15 @@ export const Home = () => {
 
 export const Button = ({ className }) => {
   return (
-    <button
-      className={
-        "bg-gradient-to-r from-prPurple to-prPink text-white font-bold p-4 rounded-[10px] sm:w-56 md:w-64 " +
-        className
-      }
-    >
-      🎉 Create my event
-    </button>
+    <Link to="/create">
+      <button
+        className={
+          "bg-gradient-to-r from-prPurple to-prPink text-white font-bold p-4 rounded-[10px] sm:w-56 md:w-64 " +
+          className
+        }
+      >
+        🎉 Create my event
+      </button>
+    </Link>
   );
 };
