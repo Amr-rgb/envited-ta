@@ -1,6 +1,7 @@
 import { BiChevronRight } from "react-icons/bi";
 import { useState } from "react";
 import { InputField } from "./InputField";
+import { Link } from "react-router-dom";
 
 export const Form = () => {
   const [titleVal, setTitleVal] = useState("");
@@ -35,12 +36,25 @@ export const Form = () => {
         />
       </div>
 
-      <button
-        disabled={!(titleVal && startVal && endVal && locationVal)}
-        className="mt-20 py-4 px-8 bg-gradient-to-r from-prPurple to-prPink rounded-md font-bold text-white flex items-center space-x-2 disabled:opacity-50"
+      <Link
+        to="/event"
+        className={
+          !(titleVal && startVal && endVal && locationVal)
+            ? "pointer-events-none"
+            : ""
+        }
       >
-        <span>Next</span> <BiChevronRight className="text-xl" />
-      </button>
+        <button
+          onClick={window.sessionStorage.setItem(
+            "event",
+            JSON.stringify({ titleVal, startVal, endVal, locationVal })
+          )}
+          disabled={!(titleVal && startVal && endVal && locationVal)}
+          className="mt-20 py-4 px-8 bg-gradient-to-r from-prPurple to-prPink rounded-md font-bold text-white flex items-center space-x-2 disabled:opacity-50"
+        >
+          <span>Next</span> <BiChevronRight className="text-xl" />
+        </button>
+      </Link>
     </div>
   );
 };
